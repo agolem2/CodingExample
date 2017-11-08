@@ -82,13 +82,11 @@ public class CarRentalResponse {
 
         //Here we get json array inside obj2 with key- destinations
 
-        JSONArray array1=jsobj.getJSONArray("destinations");
-
         //Getting json objects inside array
 
-        for(int i=0;i<array1.length();i++){
+        for(int i=0;i<array.length();i++){
 
-            JSONObject Destinations=array1.getJSONObject(i);
+            JSONObject Destinations=array.getJSONObject(i);
 
         //Getting Destinations and type of json objects inside array
 
