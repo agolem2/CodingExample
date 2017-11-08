@@ -9,6 +9,7 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Test;
@@ -30,10 +31,16 @@ public class CarRentalResponse {
         String mimeType = ContentType.getOrDefault(response.getEntity()).getMimeType();
         assertEquals(jsonMimeType, mimeType);
 
-        String json = EntityUtils.toString(response.getEntity()); 
-        JSONObject jobj = new JSONObject(json);
-        System.out.println(jobj);
-    
+        String json = EntityUtils.toString(response.getEntity());
+        System.out.println("Response String" + json);
+ 
+        JSONObject jsobj = new JSONObject(json);
+        System.out.println("Response Object" + jsobj);
+       
+        JSONArray array=jsobj.getJSONArray("destinations");
+        System.out.println("Response Array" + array);
+
+
          }
        
     }
