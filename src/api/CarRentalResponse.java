@@ -74,6 +74,8 @@ public class CarRentalResponse {
 
         System.out.println("Response Object" + jsobj);
 
+       
+
         JSONArray array=jsobj.getJSONArray("destinations");
 
         System.out.println("Response Array" + array);
@@ -90,10 +92,15 @@ public class CarRentalResponse {
 
         //Getting Destinations and type of json objects inside array
 
-        System.out.println("List Of Destinations : "+Destinations);
+        System.out.println("List Of Destinations : "+Destinations.length());
 
-            System.out.println("List Of Destinations with apt_code : "+Destinations.getString("apt_code"));
-
+            System.out.println("List Of Destinations with apt_code : "+Destinations.get("apt_code"));
+            System.out.println("Length Of Destinations with apt_code : "+Destinations.length());
+            
+            System.out.println("List Of Destinations with country_id : "+Destinations.get("country_id"));
+            System.out.println("Length Of Destinations with country_id : "+Destinations.length());
+            
+        
         }
 
 
