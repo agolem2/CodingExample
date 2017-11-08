@@ -31,8 +31,8 @@ public class CarRentalResponse {
         assertEquals(jsonMimeType, mimeType);
 
         String json = EntityUtils.toString(response.getEntity()); 
-        JSONObject jo = new JSONObject(json);
-        System.out.println(jo);
+        JSONObject jobj = new JSONObject(json);
+        System.out.println(jobj);
     
          }
        
