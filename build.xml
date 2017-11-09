@@ -159,7 +159,7 @@
         <pathelement location="../../../Downloads/java-json.jar"/>
         <pathelement location="../../../Downloads/rest-assured-3.0.5-dist/rest-assured-3.0.5.jar"/>
     </path>
-    <path id="run.TwoDayLocationCarRentalCompairsonTest.classpath">
+    <path id="run.Test.classpath">
         <path refid="Upgrade.classpath"/>
         <path refid="Maven Dependencies.libraryclasspath"/>
     </path>
@@ -199,12 +199,13 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="TwoDayLocationCarRentalCompairsonTest">
+    <target name="Test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
+            <test name="Test.CarRentalAPITest" todir="${junit.output.dir}"/>
             <test name="Test.TwoDayLocationCarRentalCompairsonTest" todir="${junit.output.dir}"/>
-            <classpath refid="run.TwoDayLocationCarRentalCompairsonTest.classpath"/>
+            <classpath refid="run.Test.classpath"/>
         </junit>
     </target>
     <target name="junitreport">
