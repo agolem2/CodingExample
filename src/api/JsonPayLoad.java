@@ -21,11 +21,10 @@ public class JsonPayLoad {
 	    org.apache.http.HttpResponse response = HttpClientBuilder.create().build().execute( request );
 	 
 	    // Then
-	    KayakCarSearch resource = RetrieveUtil.retrieveResourceFromResponse(
+	    @SuppressWarnings("unused")
+		KayakCarSearch resource = RetrieveUtil.retrieveResourceFromResponse(
 	      response, KayakCarSearch.class);
-	    //assertThat( "san", Matchers.is( resource.getapt_code() ) );
 	    
-	    System.out.println(resource.destinations());
 	}
 
 }
