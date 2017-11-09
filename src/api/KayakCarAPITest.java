@@ -52,7 +52,7 @@ public class KayakCarAPITest {
         // Then
         final KayakCarSearch resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearch.class);
         
-        System.out.println(resource.getapt_code());
+        System.out.println(resource.destinations());
         
     }
 

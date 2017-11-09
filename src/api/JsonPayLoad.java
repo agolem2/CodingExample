@@ -25,7 +25,7 @@ public class JsonPayLoad {
 	      response, KayakCarSearch.class);
 	    //assertThat( "san", Matchers.is( resource.getapt_code() ) );
 	    
-	    System.out.println(resource.getapt_code());
+	    System.out.println(resource.destinations());
 	}
 
 }

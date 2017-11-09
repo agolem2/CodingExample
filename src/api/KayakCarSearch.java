@@ -10,11 +10,11 @@ public class KayakCarSearch {
 
     // API
 
-    public String getapt_code() {
+    public String destinations() {
         return destinations;
     }
 
-    public void getapt_code(final String destinations) {
+    public void destinations(final String destinations) {
         this.destinations = destinations;
     }
 }
