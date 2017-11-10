@@ -12,6 +12,8 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.Test;
 
+import Test.KayakCarSearch;
+
 public class KayakCarAPITest {
 
     // simple request - response
