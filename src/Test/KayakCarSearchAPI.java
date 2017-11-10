@@ -1,10 +1,10 @@
 package Test;
 
-public class KayakCarSearch {
+public class KayakCarSearchAPI {
 
     private String destinations;
 
-    public KayakCarSearch() {
+    public KayakCarSearchAPI() {
         super();
     }
 

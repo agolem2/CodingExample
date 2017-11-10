@@ -12,7 +12,7 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.Test;
 
-import Test.KayakCarSearch;
+import Test.KayakCarSearchAPI;
 
 public class KayakCarAPITest {
 
@@ -52,7 +52,7 @@ public class KayakCarAPITest {
         final HttpResponse response = HttpClientBuilder.create().build().execute(request);
 
         // Then
-        final KayakCarSearch resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearch.class);
+        final KayakCarSearchAPI resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearchAPI.class);
                 
     }
 

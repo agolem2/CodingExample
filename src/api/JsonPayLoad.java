@@ -8,7 +8,7 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.Test;
 
-import Test.KayakCarSearch;
+import Test.KayakCarSearchAPI;
 
 public class JsonPayLoad {
 
@@ -24,8 +24,8 @@ public class JsonPayLoad {
 	 
 	    // Then
 	    @SuppressWarnings("unused")
-		KayakCarSearch resource = RetrieveUtil.retrieveResourceFromResponse(
-	      response, KayakCarSearch.class);
+		KayakCarSearchAPI resource = RetrieveUtil.retrieveResourceFromResponse(
+	      response, KayakCarSearchAPI.class);
 	    
 	}
 
