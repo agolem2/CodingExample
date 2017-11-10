@@ -1,4 +1,4 @@
-package api;
+package Test;
 
 
 
@@ -25,12 +25,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import org.json.JSONObject;
-
 import org.junit.Test;
 
 
 
-public class CarRentalAPITest {
+public class CarRentalAPIListAllCountries {
 
 
 
@@ -64,7 +63,7 @@ public class CarRentalAPITest {
 
         String json = EntityUtils.toString(response.getEntity());
 
-        System.out.println("Response String" + json);
+        //System.out.println("Response String" + json);
 
         JSONObject jsobj = new JSONObject(json);
 
@@ -72,24 +71,18 @@ public class CarRentalAPITest {
 
         JSONArray array = jsobj.getJSONArray("destinations");
 
-        System.out.println("Response Array" + array);
+        //System.out.println("Response Array" + array);
 
         //Here we get json array inside obj2 with key- destinations
 
         //Getting json objects inside array
 
-        for (int i = 0; i < array.length(); i++) {
+        for (int i = 0, size = array.length(); i < size; i++) {
 
             JSONObject Destinations = array.getJSONObject(i);
 
-            //Getting Destinations and type of json objects inside array and print to console 
-            //the number of destinations to verify more than 3 are present
-            //along with all the countries within the json 
-
-            System.out.println("List Of Destinations with apt_code : " + Destinations.get("apt_code"));
-
-            System.out.println("List Of Destinations with country_id : " + Destinations.get("country_id"));
-
+            int id = Destinations.getInt("country_id");
+            System.out.println("List All The Country ID's" + "=" + id);
 
         }
 

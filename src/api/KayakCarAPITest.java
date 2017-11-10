@@ -12,8 +12,6 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.Test;
 
-import Test.KayakCarSearchAPI;
-
 public class KayakCarAPITest {
 
     // simple request - response
@@ -53,7 +51,7 @@ public class KayakCarAPITest {
 
         // Then
         @SuppressWarnings("unused")
-		final KayakCarSearchAPI resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearchAPI.class);
+		final KayakCarSearch resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearch.class);
                 
     }
 
