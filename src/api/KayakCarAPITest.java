@@ -52,7 +52,8 @@ public class KayakCarAPITest {
         final HttpResponse response = HttpClientBuilder.create().build().execute(request);
 
         // Then
-        final KayakCarSearchAPI resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearchAPI.class);
+        @SuppressWarnings("unused")
+		final KayakCarSearchAPI resource = RetrieveUtil.retrieveResourceFromResponse(response, KayakCarSearchAPI.class);
                 
     }
 
