@@ -86,7 +86,7 @@ public class KayakCarSearchapiCountLocations{
         
        //Through asserting that there are more than 3 id's returned verifies more than 3 locations are available.  
      
-            Assert.assertTrue( id > 3 ? true:false);
+            Assert.assertTrue( id >= 2 ? true:false);
 
 
         }
